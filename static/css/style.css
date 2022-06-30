@@ -1,0 +1,241 @@
+html {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+    font-family: Arial;
+    background-image: url("img/food-tableware-orange-Plate-recipe-ingredient-2080603-wallhere.com\ \(1\).jpg");
+
+}
+
+.formulario {
+    background: white;
+    width: fit-content;
+    height: fit-content;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    padding: 3rem;
+    border-bottom: 1rem;
+    border-radius: 6px;
+    box-shadow: 2px 4px 15px 0 black;
+    border: 3px solid orange;
+}
+
+.pers {
+    width: fit-content;
+    height: fit-content;
+    background-color: white;
+    box-shadow: 3px 4px 15px 0 black;
+    border: 3px solid orange;
+    margin-top: 2rem;
+    padding: 2.5rem;
+    border-radius: 10px;
+    font-size: large;
+}
+
+.pers ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.pers ul li a {
+    color: black;
+    text-decoration: none;
+}
+.pers a:hover{
+    color: orange;
+}
+.title {
+    width: fit-content;
+    height: fit-content;
+    background-color: white;
+    margin-top: 1rem;
+    border-radius: 10px;
+    box-shadow: 3px 4px 15px 0 black;
+    border: 3px solid orange;
+}
+
+.title h3 {
+    color: black;
+    font-size: x-large;
+    font-weight: bold;
+    text-shadow: 2px;
+    margin-top: 0.5rem;
+}
+
+.container-fluid {
+    background: #f12711;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f5af19, #f12711);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f5af19, #f12711);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.cuad {
+    background-color: rgb(44, 9, 9);
+    width: 11rem;
+    padding: 2.5rem;
+    border-radius: 4px;
+}
+
+.ingt {
+    width: 300px;
+    height: 150px;
+    background-color: white;
+    border: 3px solid orange;
+    margin-top: 2rem;
+    border-radius: 10px;
+    box-shadow: 3px 4px 15px 0 black;
+    display: block;
+}
+
+.titing h1{
+    width: fit-content;
+    height: fit-content;
+    color: black;
+    background-color: white;
+    border: 3px solid orange;
+    margin-top: 2rem;
+    border-radius: 10px;
+    box-shadow: 3px 4px 15px 0 black;
+    font-size: x-large;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+.titing2 h2{
+    width: fit-content;
+    height: fit-content;
+    color: black;
+    background-color: white;
+    border: 3px solid orange;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    border-radius: 10px;
+    box-shadow: 3px 4px 15px 0 black;
+    font-size: x-large;
+    font-weight: bold;
+    text-shadow: 2px;
+}
+.pg {
+    width: 200px;
+    height: 150px;
+    background-color: white;
+    border: 3px solid orange;
+    margin-top: 1rem;
+    border-radius: 10px;
+    box-shadow: 3px 4px 15px 0 black;
+}
+
+.pg h1 {
+    color: black;
+    font-size: x-large;
+    font-weight: bold;
+    text-shadow: 2px;
+    margin-top: 0.5rem;
+}
+
+button {
+    text-decoration: none;
+    font-size: 20px;
+    background-color: white;
+    box-shadow: 3px 4px 15px 0 black;
+    border: 3px solid orange;
+    border-radius: 4px;
+}
+
+button :hover{
+    border-radius: 10px;
+    background-color: rgb(164, 192, 243);
+}
+.titl {
+    width: fit-content;
+    height: fit-content;
+    background-color: white;
+    border: 3px solid orange;
+    border-radius: 10px;
+    box-shadow: 3px 4px 15px 0 black;
+    border-radius: 10px;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    padding: 0.2rem;
+    text-align: center;
+}
+
+.adv {
+    width: 13.75rem;
+    height: 9.375rem;
+    background-color: white;
+    border: 3px solid orange;
+    border-radius: 10px;
+    box-shadow: 3px 4px 15px 0 black;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.rec {
+    width: 23rem;
+    height: fit-content;
+    background-color: white;
+    border: 3px solid orange;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 3px 4px 15px 0 black;
+    border-radius: 10px;
+    padding: 2rem;
+    box-sizing: content-box;
+}
+
+table {
+    text-align: left;
+    border-collapse: collapse;
+    margin: 0 0 1em 0;
+    caption-side: top;
+    background: #FFEFBA;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #FFEFBA);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+caption,
+td,
+th {
+    padding: 0.3em;
+}
+
+tbody {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+tbody th,
+tfoot th {
+    border: 0;
+}
+
+th.name {
+    width: 25%;
+}
+
+th.location {
+    width: 20%;
+}
+
+th.lasteruption {
+    width: 30%;
+}
+
+th.eruptiontype {
+    width: 25%;
+}
+
+tfoot {
+    text-align: center;
+    color: #555;
+    font-size: 0.8em;
+}

@@ -1,0 +1,47 @@
+{% extends "base_template.html" %}
+{% block title %} Ranking de recetas {% endblock %}
+<style>
+   table,
+   th,
+   td {
+      border: 1px solid black;
+      border-collapse: collapse;
+   }
+</style>
+{% block content %}
+
+{% if tiempo is none: %}
+<center>
+   <div class="titing">
+      <h1> Ingresar tiempo </h1>
+   </div>
+   <div class="ingt">
+      <form method="post" action="{{url_for('buscar_por_tiempo')}}">
+         <label for="tiempo" class="n">Tiempo de Receta</label><br>
+         <input type="text" name="tiempo" required="" /><br><br>
+         <input type="submit" name="guardar">
+      </form>
+   </div>
+</center>
+{% endif %}
+{% if tiempo is not none: %}
+<center>
+   <div class="titing2">
+      <h2> Recetas con tiempo menor a {{tiempo}} minutos</h2>
+   </div>
+
+   <div class="pg">
+      <form action="{{url_for('informacion_receta')}}" method="post">
+         <h3>Seleccione:</h3>
+         <select name="recetas" id="recetas">
+            {% for receta in recetas %}
+            <option value="{{ receta.id }}">{{receta.nombre}}</option>
+            {% endfor %}
+         </select>
+         <input type="submit" value="Mostrar">
+      </form>
+   </div>
+</center>
+{%endif%}
+
+{% endblock %}

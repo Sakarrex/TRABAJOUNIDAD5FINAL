@@ -1,0 +1,42 @@
+{% extends "base_template.html" %}
+{% block title %} {{receta.nombre}} {% endblock %}
+{% block content %}
+<div class="titing2">
+    <h2>{{receta.nombre}}</h2><br>
+</div>
+<div class="rec">
+    <h3> Compartida por {{receta.usuario.nombre}} </h3>
+    <p>
+    <h4> Descripcion: {{receta.elaboracion}}</h4>
+    </p>
+    <h4> Tiempo: {{receta.tiempo}} mins </h4>
+    <h4> Fecha: {{receta.fecha}} </h4><br>
+    <h4> Ingredientes: </h4>
+    {% for i in receta.ingrediente %}
+    <ul>
+        <li>
+            <h5> {{i.nombre}}</h5>
+        </li>
+        <li>
+            <h5> {{i.cantidad}} {{i.unidad}} </h5>
+        </li>
+    </ul>
+    {% endfor %}
+
+
+
+
+    <h4> Cantidad de Me Gusta: {{receta.cantidadmegusta}}</h4>
+
+    {% if receta.usuarioid == idusuario %}
+    <h4 class="adv">
+        Usuario no puede dar me gusta a sus propias recetas
+    </h4>
+    {%else%}
+    <form method="post" , action="{{url_for('megusta',idreceta = receta.id) }}">
+        <input type="submit" value="Me Gusta">
+</form>
+</div>
+{%endif%}
+
+{%endblock%}

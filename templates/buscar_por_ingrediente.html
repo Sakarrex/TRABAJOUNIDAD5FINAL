@@ -1,0 +1,41 @@
+{% extends "base_template.html" %}
+{% block title %} Ranking de recetas {% endblock %}
+
+{% block content %}
+
+{% if ingrediente is none: %}
+   <center>
+   <div class="titl">
+      <h1> Ingresar ingrediente a buscar </h1>
+   </div>
+   <div class="ingt">
+      <form method="post" action="{{url_for('buscar_por_ingrediente')}}">
+         <label for="ingrediente">Ingrediente a buscar</label><br>
+         <input type="text" name="ingrediente" required="" /><br><br>
+         <input type="submit" name="guardar">
+      </form>
+   </div>
+   </center>
+   {% endif %}
+   {% if ingrediente is not none: %}
+   <center>
+   <div class="titl">
+      <h3> Recetas que tienen {{ingrediente.nombre}}</h3>
+   </div>
+
+   <div class="ingt">
+      <form action="{{url_for('informacion_receta')}}" method="post">
+         <h3>Seleccione:</h3><br>
+         <select name="recetas" id="recetas">
+            {% for receta in recetas %}
+            <option value="{{ receta.id }}">{{receta.nombre}}</option>
+            {% endfor %}
+         </select>
+         <input type="submit" name="Mostrar">
+      </form>
+
+   </div>
+   </center>
+{%endif%}
+
+{% endblock %}

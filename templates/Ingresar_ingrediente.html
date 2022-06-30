@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> receta</title>
+        <link rel="stylesheet" href="../static/css/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+	    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{{url_for('inicio')}}"><b>Sancho Panza´s App</b></a>
+            </div>
+        </nav>
+    <center>
+        <div class="rec">
+            <form method="post" action="{{url_for('ingresar_ingrediente',idreceta = idreceta,cant_ingredientes = cantingredientes)}}">
+                {% if cantingredientes < 10 %}
+                    <label for="Ingrediente"> Nombre de Ingrediente </label><br>
+                    <input type="text" name="Ingrediente" placeholder="Nombre" required="" /><br>
+                    <label for="Cantidad"> Cantidad</label><br>
+                    <input type="text" name="Cantidad" required="" /><br>
+                    <label for="Unidad">Unidad de Medida</label><br>
+                    <input type="text" name="Unidad" required="" /><br><br><br>
+                    <input type="submit" value="Agregar otro Ingrediente"/>
+                {%else%}
+                <hr> Numero maximo de ingredientes alcanzados </hr>
+                {%endif%}
+            </form>
+        </div>
+    </center>
+    </body>
+</html>

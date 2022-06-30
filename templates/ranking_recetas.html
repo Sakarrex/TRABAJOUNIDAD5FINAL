@@ -1,0 +1,30 @@
+{% extends "base_template.html" %}
+{% block title %} Ranking de recetas {% endblock %}
+
+{% block content %}
+<center>
+   <div class="title">
+      <h1> 5 recetas con mas me gusta </h1>
+   </div>
+   <div class="pers">
+      <table>
+         <thead>
+            <tr>
+               <th>Nombre Usuario</th>
+               <th>Nombre Receta</th>
+               <th>Me gusta</th>
+            </tr>
+         </thead>
+         <tbody>
+            {% for receta in recetas %}
+            <tr>
+               <td>{{ receta.usuario.nombre }} </td>
+               <td>{{ receta.nombre }}</td>
+               <td>{{ receta.cantidadmegusta }}</td>
+            </tr>
+            {% endfor %}
+         </tbody>
+      </table>
+   </div>
+</center>
+{% endblock %}
